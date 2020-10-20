@@ -1,12 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { Shell } from "./shell";
 
 /**Root app component */
 export function App() {
     return (
-        <div>
+        <Shell>
             Hello
-        </div>
+        </Shell>
     )
 }
 

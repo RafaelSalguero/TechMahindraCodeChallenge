@@ -1,0 +1,9 @@
+.shell>.sidebar {
+    background: #eee;
+    padding: 10px;
+
+    display: grid;
+    grid-auto-rows: auto;
+    align-items: start;
+    justify-items: start;
+}

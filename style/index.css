@@ -1,3 +1,9 @@
+@import "shell/index.css";
+
 body {
-    background: red;
+    background: #fafafa;
+    font-family: Segoe UI, sans-serif;
+    padding: 0;
+    margin: 0;
 }
+

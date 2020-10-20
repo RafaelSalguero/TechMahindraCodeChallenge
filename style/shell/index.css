@@ -1,0 +1,46 @@
+@import "sidebar.css";
+
+.shell {
+    display: grid; 
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+
+    grid-template-areas: 
+        "icon header"
+        "sidebar content"
+    ;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+.shell>.icon {
+    grid-area: icon;
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    background: #222;
+    color: #eee;
+    padding: 10px 50px;
+    font-weight: 500;
+}
+
+.shell>.header {
+    grid-area: header;
+    display: grid;
+    grid-auto-flow: column;
+
+    grid-auto-columns: auto;
+    align-items: center;
+    justify-items: start;
+
+    background: #333;
+    color: #eee;
+    padding: 10px;
+}
+
+.shell>.sidebar {
+    grid-area: sidebar;
+}
