@@ -6,7 +6,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const htmlContent = fs.readFileSync("./index.html").toString();
 
 const clientConfig = {
-    entry: ['./src/app/index.tsx', './style/index.css'],
+    entry: ['./src/index.tsx', './style/index.css'],
+    mode: "development",
     module: {
         rules: [
             {
@@ -45,6 +46,9 @@ const clientConfig = {
             "node_modules",
             __dirname
         ]
+    },
+    devServer: {
+        contentBase: "./output"
     },
     output: {
         path: path.resolve(__dirname, 'output'),
