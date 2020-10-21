@@ -13,7 +13,7 @@ export function TableRow<T>(props: Props<T>) {
             {
                 props.columns.map((x, i) => 
                     <td                        key={i}>
-                        {props.columns[i].data(props.value)}
+                        {props.columns[i].data?.(props.value)}
                     </td>
                     )
             }

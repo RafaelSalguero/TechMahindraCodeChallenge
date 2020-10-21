@@ -1,11 +1,15 @@
 .button {
+    display: grid;
+    justify-items: center;
+    align-items: center;
     text-decoration: none;
-    padding: 5px 20px;
+    padding: 5px 10px;
     color: white;
-    background: rgb(0, 39, 139);
+    background: rgb(0, 67, 139);
     border-radius: 5px;
     border: none;
     cursor: pointer;
+    font-size: 12px;
 }
 
 .button:disabled {
@@ -14,5 +18,12 @@
 }
 
 .button:hover:not(:active):not(:disabled) {
-    background: rgb(0, 50, 177);
+    background: rgb(0, 112, 197);
+}
+
+.button-group {
+    display: grid;
+    grid-auto-columns: auto;
+    grid-auto-flow: column;
+    gap: 1px;
 }

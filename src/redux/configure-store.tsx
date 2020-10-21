@@ -18,7 +18,7 @@ export function configureStore() {
     } );
     
     const rootReducer = (state: State | undefined, action: AnyAction): State => {
-        const y = reducer(state, action );
+        const y = reducer(state, action as any);
         return {
             ...y,
             location: routing.reducer(y.location as any, action as any)

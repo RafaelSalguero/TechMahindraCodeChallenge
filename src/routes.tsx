@@ -8,7 +8,7 @@ export const home = route({}, {
         new: route({}),
         edit: route({
             params: {
-                id: "string"
+                id: "number"
             }
         })
     })

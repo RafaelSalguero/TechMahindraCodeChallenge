@@ -1,14 +1,33 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { goto } from "react-tree-router";
 import Link from "redux-first-router-link";
 import { formatNumber } from "simple-pure-utils";
 import { Table } from "src/components/table";
 import { TableColumn } from "src/components/table/logic";
+import { studentDeleted } from "src/redux/actions";
 import { State } from "src/redux/state";
 import { home } from "src/routes";
 import { ShellContent } from "src/shell/shell-ui";
 import { Student } from "../logic";
+
+function StudentButtons(props: { value: Student }) {
+    const x = props.value;
+    const dispatch = useDispatch();
+    const onDelete = () => {
+        dispatch(studentDeleted(x.id));
+    }
+    return (
+        <div className="button-group">
+            <Link to={goto(home.students.edit, { id: x.id })} className="button" >
+                Edit
+            </Link>
+            <button onClick={onDelete} className="button" >
+                Delete
+            </button>
+        </div>
+    );
+}
 
 const columns: TableColumn<Student>[] = [
     {
@@ -26,6 +45,9 @@ const columns: TableColumn<Student>[] = [
     }, {
         title: "GPA",
         data: x => formatNumber(x.GPA, 1, 2)
+    }, {
+        title: "Actions",
+        data: x => <StudentButtons value={x} />
     }
 ];
 
