@@ -7,6 +7,7 @@ import { Table } from "src/components/table";
 import { TableColumn } from "src/components/table/logic";
 import { State } from "src/redux/state";
 import { home } from "src/routes";
+import { ShellContent } from "src/shell/shell-ui";
 import { Student } from "../logic";
 
 const columns: TableColumn<Student>[] = [
@@ -33,18 +34,17 @@ export function StudentList() {
     const value = useSelector((state: State) => state.students);
 
     return (
-        <div className="table-ui">
-            <div className="header">
+        <ShellContent
+            buttons={
                 <Link className="button" to={goto(home.students.new)}>
                     Add student
                 </Link>
-            </div>
-
+            }
+        >
             <Table
-                className="content"
                 columns={columns}
                 value={value}
             />
-        </div>
+        </ShellContent>
     )
 }

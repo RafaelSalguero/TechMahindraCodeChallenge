@@ -27,6 +27,11 @@ export function NumberInput(props: Props) {
     }
 
     const onChange = (x: string) => {
+        if(!valEqStr( parseFloat(x), x)){
+            //Ignore invalid numbers
+            return;
+        }
+
         setText(x);
         props.onChange?.(parseFloat(x));
     }

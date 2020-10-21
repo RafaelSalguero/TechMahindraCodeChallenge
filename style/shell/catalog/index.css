@@ -1,3 +1,5 @@
+@import "form.css";
+
 .table-ui {
     display: grid;
     grid-template-rows: auto 1fr;
@@ -17,6 +19,6 @@
 
 .table-ui>.content {
     grid-area: content;
-
+    display: grid;
     padding: 10px;
 }

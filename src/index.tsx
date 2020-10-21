@@ -5,7 +5,7 @@ import { RouterView } from "react-tree-router";
 import { configureStore } from "./redux/configure-store";
 import { home } from "./routes";
 import { Shell } from "./shell";
-import { StudentList } from "./shell/students/list";
+import { Students } from "./shell/students";
 import { Welcome } from "./shell/welcome";
 
 /**Root app component */
@@ -16,7 +16,7 @@ export function App() {
                 base={home}
                 root={Welcome}
                 map={{
-                    students: StudentList
+                    students: Students
                 }}
             />
         </Shell>
