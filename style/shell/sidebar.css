@@ -2,12 +2,23 @@
     background: #eee;
 
     display: grid;
-    grid-auto-rows: auto;
+    grid-template-rows: auto 1fr;
+    
     align-items: start;
-    justify-items: stretch;
 }
 
-.shell>.sidebar>.nav-link {
+.sidebar>.nav-items {
+    display: grid;
+    grid-auto-rows: auto;
+}
+
+
+.nav-items>.nav-link.active {
+    background: #8ec8ff;
+}
+
+
+.nav-items>.nav-link {
     text-decoration: none;
     color: #164f85;
     padding: 5px;
@@ -16,7 +27,7 @@
     transition-duration: 0.3s;
 }
 
-.shell>.sidebar>.nav-link:hover {
+.nav-items>.nav-link:hover {
     background: #164f85;
     color: white
 }

@@ -1,0 +1,22 @@
+.table-ui {
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+    grid-template-areas: "header" "content";
+}
+
+.table-ui>.header {
+    grid-area: header;
+
+    display: grid;
+    justify-self: start;
+    justify-items: start;
+    align-items: center;
+    padding: 10px;
+}
+
+.table-ui>.content {
+    grid-area: content;
+
+    padding: 10px;
+}

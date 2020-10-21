@@ -1,15 +1,18 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { goto } from "react-tree-router";
+import Link from "redux-first-router-link";
 import { formatNumber } from "simple-pure-utils";
 import { Table } from "src/components/table";
 import { TableColumn } from "src/components/table/logic";
 import { State } from "src/redux/state";
+import { home } from "src/routes";
 import { Student } from "../logic";
 
 const columns: TableColumn<Student>[] = [
     {
         title: "First name",
-        data:x => x.firstName
+        data: x => x.firstName
     }, {
         title: "Last name",
         data: x => x.lastName,
@@ -30,9 +33,18 @@ export function StudentList() {
     const value = useSelector((state: State) => state.students);
 
     return (
-        <Table 
-            columns={columns}
-            value={value}
-        />
+        <div className="table-ui">
+            <div className="header">
+                <Link className="button" to={goto(home.students.new)}>
+                    Add student
+                </Link>
+            </div>
+
+            <Table
+                className="content"
+                columns={columns}
+                value={value}
+            />
+        </div>
     )
 }

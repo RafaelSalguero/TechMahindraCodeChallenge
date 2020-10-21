@@ -1,4 +1,6 @@
 @import "sidebar.css";
+@import "welcome.css";
+@import "catalog/index.css";
 
 .shell {
     display: grid; 

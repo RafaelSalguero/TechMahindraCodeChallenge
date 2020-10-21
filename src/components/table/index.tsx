@@ -6,12 +6,13 @@ import { TableRow } from "./row";
 interface Props<T> {
     value: T[];
     columns: TableColumn<T>[];
+    className?: string;
 }
 
 /**A data table, renders a table from an array of items */
 export function Table<T>(props: Props<T>) {
     return (
-        <table>
+        <table className={props.className}>
             <thead>
                 <TableHeader  columns={props.columns}/>
             </thead>

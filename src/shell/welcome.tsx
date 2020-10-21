@@ -2,7 +2,7 @@ import React from "react";
 
 export function Welcome() {
     return (
-        <div>
+        <div className="welcome">
            <h2>
                 Welcome to the code challenge app
             </h2> 

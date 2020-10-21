@@ -19,9 +19,14 @@ export function Shell(props: React.PropsWithChildren<{}>) {
             </div>
 
             <div className="sidebar">
+                <div className="nav-items">
+                <NavLink to={goto(home)}>
+                    Welcome
+                </NavLink>
                 <NavLink to={goto(home.students)}>
                     Students
                 </NavLink>
+                </div>
             </div>
 
             <div className="content">
