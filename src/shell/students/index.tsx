@@ -1,6 +1,7 @@
 import React from "react";
 import { RouterView } from "react-tree-router";
 import { home } from "src/routes";
+import { EditStudent } from "./edit/edit";
 import { NewStudent } from "./edit/new";
 import { StudentList } from "./list";
 
@@ -12,7 +13,7 @@ export function Students() {
             root={StudentList}
             map={{
                 new: NewStudent,
-                edit: NewStudent
+                edit: EditStudent
             }}
         />
     )

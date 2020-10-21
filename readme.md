@@ -16,4 +16,4 @@ run `npm start`
 - All layout is done using **CSS grid**s
 - All React componentes use the functional style
 - Routing is done using the *redux-first-router* and my own *redux-tree-router*
-- Redux actions are strongly typed
+- Redux actions and route parameters are strongly typed
