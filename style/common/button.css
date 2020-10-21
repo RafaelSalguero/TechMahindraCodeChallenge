@@ -5,8 +5,14 @@
     background: rgb(0, 39, 139);
     border-radius: 5px;
     border: none;
+    cursor: pointer;
 }
 
-.button:hover:not(:active) {
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.button:hover:not(:active):not(:disabled) {
     background: rgb(0, 50, 177);
 }

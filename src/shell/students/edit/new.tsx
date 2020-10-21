@@ -3,6 +3,7 @@ import { useState } from "react";
 import { ShellContent } from "src/shell/shell-ui";
 import { Student } from "../logic";
 import { StudentForm } from "./form";
+import { validate } from "./logic";
 
 
 const emptyStudent: Student = {
@@ -25,7 +26,7 @@ export function NewStudent()  {
     return (
         <ShellContent
             buttons={
-                <button className="button">
+                <button className="button" disabled={!validate(value)}>
                     Save new student
                 </button>
             }
