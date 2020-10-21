@@ -1,0 +1,15 @@
+table>thead>tr>th {
+    background: #8ec8ff;
+}
+
+table>tbody>tr>td, 
+table>thead>tr>th {
+    padding: 5px;
+
+    white-space: none;
+    word-wrap: none;
+}
+
+table>tbody>tr:nth-child(2) {
+    background: #ddd;
+}

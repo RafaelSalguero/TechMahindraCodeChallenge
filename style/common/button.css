@@ -1,0 +1,11 @@
+.button {
+    text-decoration: none;
+    padding: 5px 20px;
+    color: white;
+    background: rgb(0, 39, 139);
+    border-radius: 5px;
+}
+
+.button:hover:not(:active) {
+    background: rgb(0, 50, 177);
+}
