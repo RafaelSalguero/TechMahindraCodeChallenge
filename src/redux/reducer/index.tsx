@@ -1,7 +1,7 @@
 import { AnyAction } from "redux";
 import { State } from "../state";
 
-const initialState : State = {
+export const initialState : State = {
     students:  [
         {
             firstName: "Frida",
@@ -28,7 +28,10 @@ const initialState : State = {
             },
             phone: "533 35 24 64"
         }
-    ]
+    ],
+    location: {
+        pathname: "/"
+    } as any
 };
 
 /**App global reducer */

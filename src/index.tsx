@@ -6,6 +6,7 @@ import { configureStore } from "./redux/configure-store";
 import { home } from "./routes";
 import { Shell } from "./shell";
 import { StudentList } from "./shell/students/list";
+import { Welcome } from "./shell/welcome";
 
 /**Root app component */
 export function App() {
@@ -13,6 +14,7 @@ export function App() {
         <Shell>
             <RouterView
                 base={home}
+                root={Welcome}
                 map={{
                     students: StudentList
                 }}

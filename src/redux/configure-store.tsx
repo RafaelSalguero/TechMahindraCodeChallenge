@@ -5,7 +5,8 @@ import { connectRoutes } from "redux-first-router";
 import { home } from "src/routes";
 import * as hh from "history";
 import { State } from "./state";
-import { reducer } from "./reducer";
+import { initialState, reducer } from "./reducer";
+import thunk from "redux-thunk";
 
 const routerMap = getRouteMap(home);
 
@@ -24,13 +25,15 @@ export function configureStore() {
         }
     };
 
+
     const store = createStore<State, AnyAction, unknown, State>(
         rootReducer,
-        undefined,
+        initialState,
         composeWithDevTools(
             routing.enhancer,
             applyMiddleware(
-                routing.middleware
+                routing.middleware,
+                thunk
             ),
         )
     );

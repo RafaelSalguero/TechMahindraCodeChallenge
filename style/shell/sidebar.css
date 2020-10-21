@@ -1,9 +1,22 @@
 .shell>.sidebar {
     background: #eee;
-    padding: 10px;
 
     display: grid;
     grid-auto-rows: auto;
     align-items: start;
-    justify-items: start;
+    justify-items: stretch;
+}
+
+.shell>.sidebar>.nav-link {
+    text-decoration: none;
+    color: #164f85;
+    padding: 5px;
+
+    transition-property: background-color, color;
+    transition-duration: 0.3s;
+}
+
+.shell>.sidebar>.nav-link:hover {
+    background: #164f85;
+    color: white
 }

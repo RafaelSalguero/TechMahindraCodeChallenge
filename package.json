@@ -13,6 +13,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.11",
+    "history": "^4.10.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-redux": "^7.2.0",
@@ -20,6 +21,7 @@
     "redux": "^4.0.5",
     "redux-first-router": "^2.1.5",
     "redux-first-router-link": "^2.1.1",
+    "redux-thunk": "^2.3.0",
     "simple-pure-utils": "^2.0.30"
   },
   "devDependencies": {
